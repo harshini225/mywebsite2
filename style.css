@@ -1,6 +1,7 @@
 body {
     background-color: #cfd2d7;
   }
+  
   h1 {
     font-family: 'Outfit', sans-serif;
     line-height: 0.8em;
@@ -9,6 +10,7 @@ body {
     display: block;
     float: left;
   }
+
   h2 {
     font-family: 'Outfit', sans-serif;
     line-height: 1em;
