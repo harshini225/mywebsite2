@@ -1,0 +1,157 @@
+h1 {
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+  float: bottom;
+  justify-content: center;
+}
+
+h2 {
+  font-family: "Outfit", sans-serif;
+  margin-right: 1rem;
+  line-height: 0.8em;
+  font-size: 1.5em;
+  text-align: right;
+  display: block;
+  float: right;
+}
+
+p {
+  top: 50%;
+  left: 50%;
+  width: 100;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+body {
+  background-color: #f7f4f1;
+  cursor: url("fish2.png"), crosshair;
+}
+
+.cell {
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.cell:nth-child(10n+1):hover ~ .content {
+  --positionX: 0;
+}
+
+.cell:nth-child(n+1):nth-child(-n+10):hover ~ .content {
+  --positionY: 0;
+}
+
+.cell:nth-child(10n+2):hover ~ .content {
+  --positionX: 1;
+}
+
+.cell:nth-child(n+11):nth-child(-n+20):hover ~ .content {
+  --positionY: 1;
+}
+
+.cell:nth-child(10n+3):hover ~ .content {
+  --positionX: 2;
+}
+
+.cell:nth-child(n+21):nth-child(-n+30):hover ~ .content {
+  --positionY: 2;
+}
+
+.cell:nth-child(10n+4):hover ~ .content {
+  --positionX: 3;
+}
+
+.cell:nth-child(n+31):nth-child(-n+40):hover ~ .content {
+  --positionY: 3;
+}
+
+.cell:nth-child(10n+5):hover ~ .content {
+  --positionX: 4;
+}
+
+.cell:nth-child(n+41):nth-child(-n+50):hover ~ .content {
+  --positionY: 4;
+}
+
+.cell:nth-child(10n+6):hover ~ .content {
+  --positionX: 5;
+}
+
+.cell:nth-child(n+51):nth-child(-n+60):hover ~ .content {
+  --positionY: 5;
+}
+
+.cell:nth-child(10n+7):hover ~ .content {
+  --positionX: 6;
+}
+
+.cell:nth-child(n+61):nth-child(-n+70):hover ~ .content {
+  --positionY: 6;
+}
+
+.cell:nth-child(10n+8):hover ~ .content {
+  --positionX: 7;
+}
+
+.cell:nth-child(n+71):nth-child(-n+80):hover ~ .content {
+  --positionY: 7;
+}
+
+.cell:nth-child(10n+9):hover ~ .content {
+  --positionX: 8;
+}
+
+.cell:nth-child(n+81):nth-child(-n+90):hover ~ .content {
+  --positionY: 8;
+}
+
+.cell:nth-child(10n+10):hover ~ .content {
+  --positionX: 9;
+}
+
+.cell:nth-child(n+91):nth-child(-n+100):hover ~ .content {
+  --positionY: 9;
+}
+
+.content {
+  --positionX: 0;
+  --positionY: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  position: fixed;
+  max-width: 30%;
+  border-width: 0px;
+  background: white;
+  display: none;
+}
+
+.invisible {
+  position: fixed;
+  max-width: 30%;
+  border-width: 0px;
+  background: white;
+}
+
+.invis {
+  position: fixed;
+  max-width: 30%;
+  border-width: 0px;
+  background: white;
+  opacity: 0;
+}
+
+.header-below {
+  float: right;
+}
+
+/*# sourceMappingURL=printfun2.css.map */
