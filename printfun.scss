@@ -1,0 +1,93 @@
+h1 {
+  // position: absolute; 
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+  float: bottom; 
+  justify-content: center;
+}
+
+h2 {
+    font-family: 'Outfit', sans-serif;
+    margin-right: 1rem;
+    line-height: 0.8em;
+    font-size: 1.5em;
+    text-align:right;
+    display: block;
+    float: right;
+}
+
+p {
+    // position: absolute;
+    top: 50%; 
+    left: 50%; 
+    width: 100; 
+    font-size: 1.2em;
+    // justify-content: center;
+    text-align: center;
+}
+
+body {
+  background-color: #f7f4f1;
+  cursor: url('fish2.png'), crosshair; 
+}
+
+.cell {
+  width: 100%;
+  height: 100%;
+  // border: 1px solid gray;
+  z-index: 2;
+}
+
+@for $i from 0 to 10 {
+ .cell:nth-child(10n + #{$i + 1}):hover ~ .content {
+    --positionX: #{$i};
+  }
+  .cell:nth-child(n + #{10 * $i + 1}):nth-child(-n + #{10 * ($i + 1)}):hover ~ .content {
+    --positionY: #{$i};
+  }
+}
+
+.content {
+  --positionX: 0;
+  --positionY: 0;
+
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+    position: fixed;
+    max-width: 30%;
+    border-width: 0px;
+    // top: calc(var(--positionX) * 50px);
+    // left: calc(var(--positionY) * 50px);
+    // width: calc(100px + var(--positionX) * 20px);
+    // height: calc(100px + var(--positionY) * 20px);
+    background: white;
+    display: none;
+    // transition: all 0.3s;
+}
+
+// LMAAOO is my official comment on the following.
+.invisible {
+    position: fixed;
+    max-width: 30%;
+    border-width: 0px;
+    background: white;
+}
+
+.invis {
+    position: fixed;
+    max-width: 30%;
+    border-width: 0px;
+    background: white;
+    opacity: 0;
+}
+
+.header-below {
+    float: right;
+}
+
