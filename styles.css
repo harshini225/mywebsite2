@@ -1,6 +1,11 @@
 body {
   background-color: #cfd2d7;
 }
+
+img {
+  box-sizing: border-box;
+}
+
 h1 {
   font-family: 'Outfit', sans-serif;
   line-height: 0.8em;
@@ -14,15 +19,27 @@ h2 {
   line-height: 1em;
   margin-right: 1rem;
   font-size: 1.5em;
-  text-align:right;
+  text-align: right;
   display: block;
   float: right;
+}
+h3 {
+  font-family: 'Outfit', sans-serif;
+  line-height: 1em;
+  margin-right: 1rem;
+  font-size: 1.5em;
+  text-align: center;
+  display: block;
+  width: auto;
+  margin: auto;
+  margin-top: 1rem;
 }
 p {
   font-family: 'Outfit', sans-serif;
   line-height: 1.2em;
   font-size: 1em;
   text-align: center;
+  /* max-width: 70%; */
 }
 .image {
   max-width: 100%;
@@ -70,6 +87,7 @@ a {
 .container {
   position: relative;
   max-width: 70%;
+  /* max-height: 10%; */
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -97,4 +115,137 @@ a {
 .caption {
   font-family: 'Outfit', sans-serif;
   font-size: 1.5em;
+}
+.absurdist-fish {
+  background: linear-gradient(to right, #606FA4, pink);
+  line-height: 1.2em;
+  padding: 1rem;
+  border-radius: 25px;
+}
+.screenprint-image {
+  /* max-width: 100%;   */
+  width: 100%;
+  border: 10px solid white;
+  display: block;
+  opacity: 1;
+  transition: .5s ease;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  height: auto;
+}
+.screenprints-big {
+  display: flex;
+  max-width: 100%;
+  width: 100%;;
+  gap: 1rem;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.screenprint-image-container {
+  flex-basis: 28%;
+  /* flex: auto; */
+  position: relative;
+}
+.screenprint-image-container:hover .screenprint-image {
+  opacity: 0.2;
+}
+.screenprint-image-container:hover .screenprint-caption-container {
+  opacity: 1;
+}
+.blockprints-big {
+  display: flex; 
+  gap: 1rem;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.blockprint-image-container {
+  flex-basis: 35%;  
+  /* flex: auto; */
+  position: relative;
+}
+.blockprint-image-container:hover .screenprint-image {
+  opacity: 0.2;
+}
+.blockprint-image-container:hover .screenprint-caption-container {
+  opacity: 1;
+}
+.screenprint-caption-container {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  width: 100%;
+  height: 100%;
+  transition: .5s ease;
+  opacity: 0;
+  text-align: center;
+}
+
+.s-caption {
+  width: 100%;;
+  padding: 0.5em;
+  font-family: 'Outfit', sans-serif;
+  font-size: 1em;
+}
+.block-printing {
+  color: #cfd2d7;
+  background: linear-gradient(to right, #326061, #98202D);
+  /* background-color: pink; /* #C2A84F */ 
+  line-height: 1.2em;
+  padding: 1rem;
+  border-radius: 25px;
+  margin-top: 1rem;
+  /* margin-bottom: 1rem;
+  padding: 0.5em;
+  border: 3px;
+  border-radius: 25px; */
+}
+.lithography {
+  color: #cfd2d7;
+  background: linear-gradient(to right, #C2A84F, navy);
+  /* background-color: pink; /* #C2A84F */ 
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 0.5em;
+  border: 3px;
+  border-radius: 25px;
+}
+.desert-book {
+  /* background: linear-gradient(to right, #98202D, #C2A84F); */
+  background-color: #326061;
+  color: #cfd2d7;
+  /* background-color: pink; /* #C2A84F */ 
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 0.5em;
+  border: 3px;
+  border-radius: 25px;
+}
+.book-image {
+  max-width: 35%; 
+  /* max-height: 100%; */
+  border-radius: 12px;
+  border: 10px solid white;
+  display: block;
+  /* margin-left: auto;
+  margin-right: auto; */
+  margin-bottom: 1rem;
+  opacity: 1;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+.desert-book-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.riso-printing {
+  background: linear-gradient(to right, pink, #C2A84F); 
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 0.5em;
+  border: 3px;
+  border-radius: 25px;
 }
