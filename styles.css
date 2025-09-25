@@ -36,8 +36,8 @@ h3 {
 }
 p {
   font-family: 'Outfit', sans-serif;
-  line-height: 1.2em;
-  font-size: 1em;
+  line-height: 1.3em;
+  font-size: 1.1em;
   text-align: center;
   /* max-width: 70%; */
 }
@@ -45,7 +45,8 @@ p {
   max-width: 100%;
   max-height: 100%;
   border-radius: 25px;
-  border: 3px solid black;
+  border: 2px solid black;
+  box-shadow: 0 0 10px 5px #cfd2d7;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -56,6 +57,8 @@ p {
 a {
   color: maroon;
   text-align: right;
+  /* margin-top: 0.5em; */
+  line-height: 1.2em;
 }
 .big-container {
   display: flex;
@@ -83,11 +86,49 @@ a {
     display: flex;
     justify-content: space-between;
   }
+  .desert-book-images {
+    flex-direction: column;
+    align-items: center;
+  }
+  .book-image {
+    max-width: 80%;
+  }
+  .blockprints-big {
+    flex-direction: column;
+  }
+  .blockprint-image-container {
+    max-width: 80%;
+    /* width: 80%; */
+  }
+  .blockprint-image-container-2 {
+    max-width: 80%;
+    justify-self: center;
+    /* width: 80%; */
+  }
+  .screenprints-big {
+    flex-direction: column;
+    max-width: 80%;
+    justify-self: center;
+  }
+}
+@media screen and (min-width: 40rem) {
+  .container {
+    max-width: 75%;
+  }
+  .book-image {
+    max-width: 35%;
+  }
+  .blockprint-image-container-2 {
+    max-width: 50%; 
+    margin-left: 25%; 
+    margin-right: 25%;
+  }
+  .screenprints-big {
+    max-width: 100%;
+  }
 }
 .container {
   position: relative;
-  max-width: 70%;
-  /* max-height: 10%; */
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -120,6 +161,7 @@ a {
   background: linear-gradient(to right, #606FA4, pink);
   line-height: 1.2em;
   padding: 1rem;
+  margin-top: 1rem;
   border-radius: 25px;
 }
 .screenprint-image {
@@ -135,8 +177,9 @@ a {
 }
 .screenprints-big {
   display: flex;
-  max-width: 100%;
+  /* max-width: 100%; */
   width: 100%;;
+  /* padding: 1rem; */
   gap: 1rem;
   justify-content: space-evenly;
   align-items: center;
@@ -163,6 +206,10 @@ a {
   /* flex: auto; */
   position: relative;
 }
+.blockprint-image-container-2 {
+  flex-basis: 35%;
+  position: relative;
+}
 .blockprint-image-container:hover .screenprint-image {
   opacity: 0.2;
 }
@@ -182,7 +229,6 @@ a {
   opacity: 0;
   text-align: center;
 }
-
 .s-caption {
   width: 100%;;
   padding: 0.5em;
@@ -219,13 +265,11 @@ a {
   /* background-color: pink; /* #C2A84F */ 
   margin-top: 1rem;
   margin-bottom: 1rem;
-  padding: 0.5em;
   border: 3px;
   border-radius: 25px;
+  padding: 1rem;
 }
 .book-image {
-  max-width: 35%; 
-  /* max-height: 100%; */
   border-radius: 12px;
   border: 10px solid white;
   display: block;
@@ -245,7 +289,33 @@ a {
   background: linear-gradient(to right, pink, #C2A84F); 
   margin-top: 1rem;
   margin-bottom: 1rem;
-  padding: 0.5em;
+  padding: 1rem;
   border: 3px;
   border-radius: 25px;
 }
+
+details:first-of-type summary::marker,
+:is(::-webkit-details-marker) {
+  content: "+ (expand)";
+  font-family: 'Outfit', sans-serif;
+  text-align: right;
+  text-justify: right;
+}
+
+details[open]:first-of-type summary::marker {
+  content: "− (collapse)";
+  font-family: 'Outfit', sans-serif;
+  text-align: right;
+  text-justify: right;
+}
+
+/* summary::marker {
+  content: none
+}
+
+summary::after {
+  content: ' ►';
+}
+details[open] summary:after {
+  content: " ▼";
+} */
