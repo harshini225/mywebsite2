@@ -72,6 +72,7 @@ a {
 .header-above {
   display: none;
 }
+/* mobile view */ 
 @media screen and (max-width: 40rem) {
   .big-container {
     flex-direction: column;
@@ -88,6 +89,7 @@ a {
   }
   .desert-book-images {
     flex-direction: column;
+    justify-content: center;
     align-items: center;
   }
   .book-image {
@@ -102,15 +104,21 @@ a {
   }
   .blockprint-image-container-2 {
     max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
     justify-self: center;
-    /* width: 80%; */
+    align-items: center;
+    justify-content: center;
   }
   .screenprints-big {
     flex-direction: column;
     max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
     justify-self: center;
   }
 }
+/* wider (desktop) view */ 
 @media screen and (min-width: 40rem) {
   .container {
     max-width: 75%;
@@ -177,9 +185,7 @@ a {
 }
 .screenprints-big {
   display: flex;
-  /* max-width: 100%; */
-  width: 100%;;
-  /* padding: 1rem; */
+  flex-wrap: wrap;
   gap: 1rem;
   justify-content: space-evenly;
   align-items: center;
@@ -248,16 +254,6 @@ a {
   border: 3px;
   border-radius: 25px; */
 }
-.lithography {
-  color: #cfd2d7;
-  background: linear-gradient(to right, #C2A84F, navy);
-  /* background-color: pink; /* #C2A84F */ 
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  padding: 0.5em;
-  border: 3px;
-  border-radius: 25px;
-}
 .desert-book {
   /* background: linear-gradient(to right, #98202D, #C2A84F); */
   background-color: #326061;
@@ -309,13 +305,3 @@ details[open]:first-of-type summary::marker {
   text-justify: right;
 }
 
-/* summary::marker {
-  content: none
-}
-
-summary::after {
-  content: ' ►';
-}
-details[open] summary:after {
-  content: " ▼";
-} */
